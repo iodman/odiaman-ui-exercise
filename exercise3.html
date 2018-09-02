@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Exercise 3</title>
+<script type="text/javascript">
+var exercise_3 = {
+  splitWords: function() {
+    this.displayResult('');
+    var wordsArr = this.getWords();
+    var reversedArr = [];
+    _this = this;
+    wordsArr.forEach(function(val, index) {
+      reversedArr.push((index % 2) ? _this.reverseString(val) : val);
+    });
+    this.displayResult(reversedArr.join(' '));
+  },
+
+  getWords: function() {
+    var words = document.getElementById('stringContainer').value;
+    return words.trim().split(' ');
+  },
+
+  reverseString: function(str) {
+    return str.split('').reverse().join('');
+  },
+
+  displayResult: function(result) {
+    document.getElementById('reverseContainer').innerHTML = result;
+  }
+};
+</script>
+</head>
+<body>
+  <main>
+    <textarea id="stringContainer" placeholder="Type your string here"></textarea>
+    <button onclick="exercise_3.splitWords()">Start reverse</button>
+    <h3 id="reverseContainer"></h3>
+  </main>
+</body>
+</html>

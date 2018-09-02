@@ -1,0 +1,71 @@
+<html>
+<head>
+  <title>Exercise 2</title>
+  <style>
+  body {
+    background-color: #eee;
+    text-align: center;
+    margin-top: 10%;
+  }
+
+  button {
+    border: 0;
+    border-radius: 4px;
+    width: 150px;
+    margin: 0 auto;
+    padding: 15px;
+    text-shadow: 1px 1px 1px rgba(24, 112, 86, 1);
+    box-shadow: 5px 5px 8px -3px rgba(148,148,148,1);
+    background-color: #37b87d;
+    color: #fff;
+    font-size: 14pt;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #99cc66;
+  }
+
+  button::before {
+    position: relative;
+    left: -25px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    content: "\2714";
+    padding: 15px;
+    text-shadow: 1px 1px 1px rgba(22, 68, 59, 1);
+    box-shadow: -2px 4px 8px -3px rgba(148,148,148,1);
+    background-color: #1d232b;
+    color: #fff;
+  }
+
+  button:hover::before{
+    background-color: #555;
+  }
+
+  button::after {
+    position: relative;
+    left: -135px;
+    top: -5px;
+    height: 0;
+    width: 0;
+    margin-top: -20px;
+    padding: 0;
+    border: solid transparent;
+    border-color: rgba(28, 35, 43, 0);
+  	border-right-color: #1d232b;
+  	border-width: 10px;
+    content: " ";
+    font-size: 0;
+  }
+
+  button:hover::after {
+    border-right-color: #555;
+  }
+
+  </style>
+</head>
+<body>
+  <button>Done</button>
+</body>
+</html>
